@@ -41,18 +41,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 }
     
     @IBAction func cameraButton(_ sender: UIButton) {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
         let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-       
-      
+       alertController.addAction(cancelAction)
+        
         let cameraAction = UIAlertAction(title: "camera", style: .default, handler: { action in
             print("user selected camera")
         })
-        alertController.addAction(cancelAction)
+        alertController.addAction(cameraAction)
         
         let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: { action in
             print("user selected Photo library")
         })
+        alertController.addAction(photoLibraryAction)
     alertController.popoverPresentationController?.sourceView =
         sender
         
