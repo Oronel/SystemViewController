@@ -51,12 +51,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
        alertController.addAction(cancelAction)
         
         let cameraAction = UIAlertAction(title: "camera", style: .default, handler: { action in
-            print("user selected camera")
+           imagePicker.sourceType = .camera
+            self.present(imagePicker, animated: true, completion: nil)
         })
         alertController.addAction(cameraAction)
         
         let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: { action in
-            print("user selected Photo library")
+           imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
         })
         alertController.addAction(photoLibraryAction)
     alertController.popoverPresentationController?.sourceView =
