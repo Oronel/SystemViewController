@@ -8,8 +8,9 @@
 
 import UIKit
 import SafariServices
+import MessageUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -39,7 +40,13 @@ class ViewController: UIViewController {
     }
 }
     
-    @IBAction func cameraButton(_ sender: Any) {
+    @IBAction func cameraButton(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        alertController.popoverPresentationController?.sourceView =
+        sender
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func emaiButton(_ sender: Any) {
