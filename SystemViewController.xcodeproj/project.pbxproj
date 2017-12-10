@@ -59,7 +59,6 @@
 				0488B5F61FDD5F1600598EF5 /* Models */,
 				0488B5F51FDD5EFD00598EF5 /* Controllers */,
 				0488B5EA1FDD5ACA00598EF5 /* Assets.xcassets */,
-				0488B5EC1FDD5ACA00598EF5 /* LaunchScreen.storyboard */,
 				0488B5EF1FDD5ACA00598EF5 /* Info.plist */,
 			);
 			path = SystemViewController;
@@ -84,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				0488B5E71FDD5ACA00598EF5 /* Main.storyboard */,
+				0488B5EC1FDD5ACA00598EF5 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";

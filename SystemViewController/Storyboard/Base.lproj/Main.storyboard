@@ -25,11 +25,35 @@
                                     <constraint firstAttribute="width" secondItem="dHG-F4-ynj" secondAttribute="height" multiplier="1:1" id="0Ri-JP-NjA"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H4P-PB-w6T">
+                                <rect key="frame" x="16" y="411" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tl-cp-yvi">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                        <state key="normal" title="Share"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwI-DT-mbM">
+                                        <rect key="frame" x="86" y="0.0" width="85.5" height="30"/>
+                                        <state key="normal" title="Safari"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uY-e7-Yfn">
+                                        <rect key="frame" x="171.5" y="0.0" width="86" height="30"/>
+                                        <state key="normal" title="Camera"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvU-rC-xnl">
+                                        <rect key="frame" x="257.5" y="0.0" width="85.5" height="30"/>
+                                        <state key="normal" title="Email"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dHG-F4-ynj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0cx-Nq-g2z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H4P-PB-w6T" secondAttribute="trailing" constant="16" id="CU0-GG-Ckj"/>
                             <constraint firstItem="dHG-F4-ynj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="H6J-KB-gUK"/>
+                            <constraint firstItem="H4P-PB-w6T" firstAttribute="top" secondItem="dHG-F4-ynj" secondAttribute="bottom" constant="16" id="Oet-EX-S93"/>
+                            <constraint firstItem="H4P-PB-w6T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Q33-Cz-7mR"/>
                             <constraint firstItem="dHG-F4-ynj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ptc-G3-JkY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
