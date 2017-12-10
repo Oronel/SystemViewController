@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func shareButton(_ sender: Any) {
+        guard let image = imageView.image else {return}
     }
     
     @IBAction func safariButton(_ sender: Any) {
