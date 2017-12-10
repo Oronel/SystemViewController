@@ -31,7 +31,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(activityController, animated: true, completion: nil)
     }
     
-    @IBAction func safariButton(_ sender: Any) {
+    @IBAction func safariButton(_ sender: UIButton) {
         if let url = URL(string: "http://www.youtube.com") {
         let safariViewController = SFSafariViewController(url:
             url)
@@ -43,10 +43,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func cameraButton(_ sender: UIButton) {
         let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+       
+      
+        let cameraAction = UIAlertAction(title: "camera", style: .default, handler: { action in
+            print("user selected camera")
+        })
         alertController.addAction(cancelAction)
-        alertController.popoverPresentationController?.sourceView =
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: { action in
+            print("user selected Photo library")
+        })
+    alertController.popoverPresentationController?.sourceView =
         sender
-        present(alertController, animated: true, completion: nil)
+        
+          present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func emaiButton(_ sender: Any) {
